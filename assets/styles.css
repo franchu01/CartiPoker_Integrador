@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+/* General Stuff */
+
+:root {
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+    --backgroundcolor: #14213d;
+    --enlightened_fontcolor: #fca311;
+    --default_fontcolor: #FFFFFF;
+    --less_important_fontcolor: #e5e5e5;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--medium);
+    background-color: var(--backgroundcolor);
+    color: var(--default_fontcolor);
+    list-style: none;
+}
+
+span{
+    color: var(--enlightened_fontcolor);
+}
+
+.botones{
+    border: none;
+    border-radius: 60px;
+    padding: 17px 100px;
+    background-color: var(--enlightened_fontcolor);
+    color: var(--default_fontcolor);
+    font-size: 27px;
+}
+
+/* Header */
+/* Nav Bar */
+
+nav{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--enlightened_fontcolor);
+}
+
+.logo{
+    width: auto;
+    height: 80px;
+}
+
+.menu_container_lista{
+    display: flex;
+    margin-right: 50px;
+    gap: 50px;
+}
+
+.material-symbols-outlined{
+    font-size: 30px;
+    font-weight: var(--medium);
+    cursor: pointer;
+}
+
+
+/* Main */
+/*Hero*/
+
+
+h1{
+    font-size: 160px;
+    font-weight: var(--bold);
+}
+
+h1 span{
+    font-weight: var(--bold);
+}
+
+.slogan{
+    font-size: 40px;
+    margin: 20px;
+    color: var(--less_important_fontcolor);
+    font-weight: var(--medium);
+}
+/*
+.imagen_hero_container{
+    background-color: var(--enlightened_fontcolor);
+    width: 400px;
+    height: 400px;
+}
+*/
+
+.hero_container{
+    display: flex;
+    padding: 10px 200px;
+}
+
+/* Cartas mas compradas */
+
+.cartasmascompradas_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 140px;
+}
+
+/* Diseño Cards */
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 235px;
+    background-color: var(--enlightened_fontcolor);
+    border-radius: 20px;
+    padding: 20px 25px;
+    margin: 0 auto;
+}
+
+.imagencard{
+    height: 180px;
+    width: 80px;
+    background-color: var(--less_important_fontcolor);
+}
+.precio_card, .titulo_card{
+    background-color: var(--enlightened_fontcolor);
+    width: min-content;
+}
+
+.botones{
+    padding: 8px 50px;
+    font-size: 18px;
+}
