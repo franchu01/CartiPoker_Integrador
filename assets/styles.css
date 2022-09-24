@@ -20,9 +20,13 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-weight: var(--medium);
-    background-color: var(--backgroundcolor);
+    
     color: var(--default_fontcolor);
     list-style: none;
+}
+
+body{
+    background-color: var(--backgroundcolor);
 }
 
 span{
@@ -109,31 +113,58 @@ h1 span{
     margin-top: 140px;
 }
 
+/* Recomended Container */
+.recomended_container{
+    display: flex;
+    margin-top: 20px;
+    gap: 50px;
+}
 /* Diseño Cards */
 
-.cards{
+.item-product{
+    background-color: var(--enlightened_fontcolor);
+}
+
+.product_recomendation{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 235px;
+    position: relative;
+    width: 200px;
+    height: 250px;
     background-color: var(--enlightened_fontcolor);
     border-radius: 20px;
     padding: 20px 25px;
     margin: 0 auto;
 }
 
-.imagencard{
-    height: 180px;
-    width: 80px;
-    background-color: var(--less_important_fontcolor);
-}
-.precio_card, .titulo_card{
-    background-color: var(--enlightened_fontcolor);
-    width: min-content;
+.add-btn{
+    border: none;
+    background-color: var(--default_fontcolor);
+    color: var(--enlightened_fontcolor);
+    width: 100px;
+    height: 50px;
+    font-weight: var(--bold);
+    font-size: 20px;
+    border-radius: 30px;
 }
 
-.botones{
-    padding: 8px 50px;
-    font-size: 18px;
+.favorito{
+    position: absolute;
+    top: 3px;
+    left: 9px;
+}
+
+.title-card{
+    font-weight: var(--bold);
+    font-size: 30px;
+}
+
+.value-card{
+    font-weight: var(--regular);
+}
+
+.favorito_icon{
+    color: var(--default_fontcolor);
 }
