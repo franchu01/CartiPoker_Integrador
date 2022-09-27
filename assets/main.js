@@ -40,10 +40,17 @@ const renderProductsRandom = (contenedor, cantidad, funcionRender) => {
     contenedor.innerHTML = cardsListRandom.map(funcionRender).join("");
 }
 
+// ----------- ELEGI EL TIPO QUE QUIERAS ----------------- // 
+
+const selectedTypeButton = document.querySelector(".card_category")
+const selectedProductsContainer = document.querySelector(".selected_products_container")
+
+
 // -----------  INIT ----------  //
 
 const init = () => {
     document.addEventListener('DOMContentLoaded', renderProductsRandom(recomendedCards,5,renderRecomendedCards));
+    selectedTypeButton.addEventListener('click', renderProductsRandom(selectedProductsContainer,12,renderRecomendedCards))
 }
 
 init();
