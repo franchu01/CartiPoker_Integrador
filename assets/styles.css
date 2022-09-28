@@ -20,7 +20,6 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-weight: var(--medium);
-    
     color: var(--default_fontcolor);
     list-style: none;
 }
@@ -46,6 +45,10 @@ img{
     height: 130px;
     width: auto;
     border-radius: 8px;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* Header */
@@ -125,6 +128,11 @@ h1 span{
     margin-top: 40px;
     gap: 50px;
 }
+
+.sale_price, .sale-spacing-price{
+    color: red;
+    font-weight: bold;
+}
 /* Diseño Cards */
 
 .item-product{
@@ -196,8 +204,14 @@ h1 span{
 .card_category{
     background-color: var(--enlightened_fontcolor);
     margin-top: 30px;
+    cursor: pointer;
     padding: 20px 60px;
     border-radius: 30px;
+    transition: all 0.5s;
+}
+
+.card_category:hover{
+    transform: scale(1.1);
 }
 
 .selected_products_container{
@@ -207,8 +221,49 @@ h1 span{
     gap: 10px;
 }
 
+/* Clases para favoritos */
+
+.favorito{
+    color: red;
+}
+
+
+
+/* Ver Todas  section */
+
+.ver_todas_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.ver_todas_boton{
+    padding: 15px 35px;
+    font-size: 20px;
+    width: 200px;
+    cursor: pointer;
+}
+
 /* FOOTER */
 
 footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 200px;
 }
+
+.datos_personales ul{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.frase_final{
+    margin-top: 10px;
+}
+
+

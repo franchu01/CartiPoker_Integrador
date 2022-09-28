@@ -354,7 +354,7 @@ const pokerDeckData = [
         value: "Q",
         price: 1100,
         category: "Diamante",
-        img: './assets/img/CamScanner 09-13-2022 10.56_28.jpg',
+        img: './assets/img/CamScanner 09-13-2022 10.56_38.jpg',
     },
     {
         id: 52,
