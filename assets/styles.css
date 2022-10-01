@@ -38,6 +38,7 @@ span{
     padding: 17px 100px;
     background-color: var(--enlightened_fontcolor);
     color: var(--default_fontcolor);
+    cursor: pointer;
     font-size: 27px;
 }
 
@@ -79,6 +80,81 @@ nav{
     cursor: pointer;
 }
 
+/* CART DESIGN */
+
+.cart{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    background-color: #fca311;
+    width: 300px;
+    height: 400px;
+    height: auto;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 40px;
+    z-index: 2;
+    box-shadow: inset -39px 0px 50px -22px #000000;
+}
+
+.cart h2{
+    font-weight: var(--bold);
+    text-decoration: underline 1px;
+}
+
+.title_and_exit_cart{
+    display: flex;
+    align-items: center;
+}
+.exit_cart_container{
+    display: flex;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--backgroundcolor);
+    width: 20px;
+    height: 20px;
+}
+.exit_cart{
+    font-weight: var(--bold);
+}
+
+.overlay{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background: rgba(37, 37, 37, 0.2);
+    box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: none;
+}
+
+.show{
+    display: flex;
+}
+.show_overlay{
+    display: flex;
+}
+
+.boton_comprar{
+    cursor: pointer;
+    background-color: var(--backgroundcolor);
+    border-radius: 16px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 40px;
+}
+
 
 /* Main */
 /*Hero*/
@@ -109,7 +185,7 @@ h1 span{
 
 .hero_container{
     display: flex;
-    padding: 10px 200px;
+    padding: 15px 300px;
 }
 
 /* Cartas mas compradas */
@@ -121,6 +197,8 @@ h1 span{
     flex-direction: column;
     margin-top: 140px;
 }
+
+
 
 /* Recomended Container */
 .recomended_container{
@@ -162,6 +240,11 @@ h1 span{
     font-weight: var(--bold);
     font-size: 20px;
     border-radius: 30px;
+    cursor: pointer;
+}
+
+.add-btn:hover{
+    transform: scale(1.1);
 }
 
 .favorito{

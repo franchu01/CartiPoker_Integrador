@@ -4,6 +4,7 @@ const pokerDeckData = [
         value: "A",
         price: 5000,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_14.jpg',
     },
     {
@@ -11,6 +12,7 @@ const pokerDeckData = [
         value: "2",
         price: 200,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_15.jpg',
     },
     {
@@ -18,6 +20,7 @@ const pokerDeckData = [
         value: "3",
         price: 300,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_16.jpg',
     },
     {
@@ -25,6 +28,7 @@ const pokerDeckData = [
         value: "4",
         price: 400,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_17.jpg',
     },
     {
@@ -32,6 +36,7 @@ const pokerDeckData = [
         value: "5",
         price: 500,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_18.jpg',
     },
     {
@@ -39,6 +44,7 @@ const pokerDeckData = [
         value: "6",
         price: 600,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_19.jpg',
     },
     {
@@ -46,6 +52,7 @@ const pokerDeckData = [
         value: "7",
         price: 700,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_20.jpg',
     },
     {
@@ -53,6 +60,7 @@ const pokerDeckData = [
         value: "8",
         price: 800,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_21.jpg',
     },
     {
@@ -60,6 +68,7 @@ const pokerDeckData = [
         value: "9",
         price: 900,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_22.jpg',
     },
     {
@@ -67,6 +76,7 @@ const pokerDeckData = [
         value: "10",
         price: 1000,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_23.jpg',
     },
     {
@@ -74,6 +84,7 @@ const pokerDeckData = [
         value: "J",
         price: 1100,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_24.jpg',
     },
     {
@@ -81,6 +92,7 @@ const pokerDeckData = [
         value: "Q",
         price: 1200,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_25.jpg',
     }, 
     {
@@ -88,6 +100,7 @@ const pokerDeckData = [
         value: "K",
         price: 1300,
         category: "Corazon",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_26.jpg',
     },
     {
@@ -95,6 +108,7 @@ const pokerDeckData = [
         value: "A",
         price: 5000,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_40.jpg',
     },
     {
@@ -102,6 +116,7 @@ const pokerDeckData = [
         value: "2",
         price: 200,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_41.jpg',
     },
     {
@@ -109,6 +124,7 @@ const pokerDeckData = [
         value: "3",
         price: 300,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_42.jpg',
     },
     {
@@ -116,6 +132,7 @@ const pokerDeckData = [
         value: "4",
         price: 400,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_43.jpg',
     },
     {
@@ -123,6 +140,7 @@ const pokerDeckData = [
         value: "5",
         price: 500,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_44.jpg',
     },
     {
@@ -130,6 +148,7 @@ const pokerDeckData = [
         value: "6",
         price: 600,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_45.jpg',
     },
     {
@@ -137,6 +156,7 @@ const pokerDeckData = [
         value: "7",
         price: 700,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_46.jpg',
     },
     {
@@ -144,6 +164,7 @@ const pokerDeckData = [
         value: "8",
         price: 800,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_47.jpg',
     },    
     {
@@ -151,6 +172,7 @@ const pokerDeckData = [
         value: "9",
         price: 900,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_48.jpg',
     },
     {
@@ -158,6 +180,7 @@ const pokerDeckData = [
         value: "10",
         price: 1000,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_49.jpg',
     },
     {
@@ -165,6 +188,7 @@ const pokerDeckData = [
         value: "J",
         price: 1100,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_50.jpg',
     },
     {
@@ -172,6 +196,7 @@ const pokerDeckData = [
         value: "Q",
         price: 1200,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_51.jpg',
     },
     {
@@ -179,6 +204,7 @@ const pokerDeckData = [
         value: "K",
         price: 1300,
         category: "Pica",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_52.jpg',
     },
     {
@@ -186,6 +212,7 @@ const pokerDeckData = [
         value: "A",
         price: 5000,
         category: "Trebol",
+        sale: false,
         img: './assets/img/ATrebol.jpg',
     },
     {
@@ -193,6 +220,7 @@ const pokerDeckData = [
         value: "2",
         price: 200,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_2.jpg',
     },
     {
@@ -200,6 +228,7 @@ const pokerDeckData = [
         value: "3",
         price: 300,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_3.jpg',
     },
     {
@@ -207,6 +236,7 @@ const pokerDeckData = [
         value: "4",
         price: 400,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_4.jpg',
     },
     {
@@ -214,6 +244,7 @@ const pokerDeckData = [
         value: "5",
         price: 500,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_5.jpg',
     },
     {
@@ -221,6 +252,7 @@ const pokerDeckData = [
         value: "6",
         price: 600,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_6.jpg',
     },
     {
@@ -228,6 +260,7 @@ const pokerDeckData = [
         value: "7",
         price: 700,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_7.jpg',
     },
     {
@@ -235,6 +268,7 @@ const pokerDeckData = [
         value: "8",
         price: 800,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_8.jpg',
     },
     {
@@ -242,6 +276,7 @@ const pokerDeckData = [
         value: "9",
         price: 900,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_9.jpg',
     },
     {
@@ -249,6 +284,7 @@ const pokerDeckData = [
         value: "10",
         price: 1000,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_10.jpg',
     },
     {
@@ -256,6 +292,7 @@ const pokerDeckData = [
         value: "J",
         price: 1100,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_11.jpg',
     },
     {
@@ -263,6 +300,7 @@ const pokerDeckData = [
         value: "Q",
         price: 1200,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_12.jpg',
     },
     {
@@ -270,6 +308,7 @@ const pokerDeckData = [
         value: "K",
         price: 1300,
         category: "Trebol",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_13.jpg',
     },
     {
@@ -277,6 +316,7 @@ const pokerDeckData = [
         value: "A",
         price: 5000,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_27.jpg',
     },
     {
@@ -284,6 +324,7 @@ const pokerDeckData = [
         value: "2",
         price: 200,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_28.jpg',
     },
     {
@@ -291,6 +332,7 @@ const pokerDeckData = [
         value: "3",
         price: 200,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_29.jpg',
     },
     {
@@ -298,6 +340,7 @@ const pokerDeckData = [
         value: "4",
         price: 300,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_30.jpg',
     },
     {
@@ -305,6 +348,7 @@ const pokerDeckData = [
         value: "5",
         price: 400,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_31.jpg',
     },
     {
@@ -312,6 +356,7 @@ const pokerDeckData = [
         value: "6",
         price: 500,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_32.jpg',
     },
     {
@@ -319,6 +364,7 @@ const pokerDeckData = [
         value: "7",
         price: 600,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_33.jpg',
     },
     {
@@ -326,6 +372,7 @@ const pokerDeckData = [
         value: "8",
         price: 700,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_34.jpg',
     },
     {
@@ -333,6 +380,7 @@ const pokerDeckData = [
         value: "9",
         price: 800,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_35.jpg',
     },
     {
@@ -340,6 +388,7 @@ const pokerDeckData = [
         value: "10",
         price: 900,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_36.jpg',
     },
     {
@@ -347,6 +396,7 @@ const pokerDeckData = [
         value: "J",
         price: 5000,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_37.jpg',
     },
     {
@@ -354,6 +404,7 @@ const pokerDeckData = [
         value: "Q",
         price: 1100,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_38.jpg',
     },
     {
@@ -361,6 +412,7 @@ const pokerDeckData = [
         value: "K",
         price: 1200,
         category: "Diamante",
+        sale: false,
         img: './assets/img/CamScanner 09-13-2022 10.56_39.jpg',
     },
     {
@@ -368,6 +420,7 @@ const pokerDeckData = [
         value: "Evil Joker",
         price: 666,
         category: "All",
+        sale: false,
         img: './assets/img/evilJoker.jpg',
     },
     {
@@ -375,6 +428,7 @@ const pokerDeckData = [
         value: "Blue Joker",
         price: 4343,
         category: "All",
+        sale: false,
         img: './assets/img/blueJoker.jpg',
     },
     {
@@ -382,6 +436,7 @@ const pokerDeckData = [
         value: "Funny Joker",
         price: 6969,
         category: "All",
+        sale: false,
         img: './assets/img/funnyJoker.jpg',
     },
     {
@@ -389,6 +444,7 @@ const pokerDeckData = [
         value: "God Joker",
         price: Infinity,
         category: "All",
+        sale: false,
         img: './assets/img/godJoker.jpg',
     },
 ];
