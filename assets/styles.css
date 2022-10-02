@@ -147,9 +147,6 @@ nav{
     display: none;
 }
 
-.show{
-    display: flex;
-}
 .show_overlay{
     display: flex;
 }
@@ -338,9 +335,19 @@ h1 span{
 
 .ver_todas_container{
     display: flex;
+    width: 100vw;
+    height: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
+}
+
+.todas_container{
+    display: none;
+    padding: 20px;
+    gap: 5px;
+    flex-wrap: wrap;
 }
 
 
@@ -371,7 +378,7 @@ footer{
     margin-top: 10px;
 }
 
-.title_card--cart{
-    text-decoration: none;
+.show{
+    display: flex;
 }
 

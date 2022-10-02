@@ -145,15 +145,33 @@ const saveLocalStorage = cartList => {
 
 const buyBtn = document.querySelector(".boton_comprar")
 
-const completeBuy = () => {
-    if (!cart.length) {
-        return
-    } else {
-        window.confirm('¿Desea finalizar su compra?')
-        localStorage.removeItem('cart')
-        window.location.reload()
-    }
+const checkForGod = () => {
+    var isGodJokerHere = false
+    cart.forEach( (card) => {
+        if(card.price == "Infinity"){
+            isGodJokerHere = true
+        }
+    })
+    return isGodJokerHere
 }
+
+const completeBuy = () => {
+    const canBuy = checkForGod()
+    console.log(canBuy)
+    buyBtn.addEventListener('click', () => {
+        if (!cart.length) {
+            return
+        } else if (canBuy){
+            alert("No tienes dinero suficiente")
+        } else {
+            window.confirm('¿Desea finalizar su compra?')
+            localStorage.removeItem('cart')
+            window.location.reload()
+        }
+    })
+
+}
+
 var i = 0
 const renderCartProduct = cartProduct => {
 
@@ -172,7 +190,7 @@ const renderCartProduct = cartProduct => {
             <div class="card_item">
                 <img src="${img}" alt="imgCard">
                 <div class="product_card--description">
-                    <h2 class="title_card--cart" style="text-decoration:line-through";>${value}</h2>
+                    <h2 class="title_card--cart" style="text-decoration:none";>${value}</h2>
                     <p class="description_card--cart">${category}</p> 
                     `
     var ultimaParteDelCart = `
@@ -243,6 +261,13 @@ const addCardToCart = (e) => {
 const allCards = document.querySelector(".todas_container");
 const showAllButton = document.querySelector(".ver_todas_boton")
 
+const showAll = () => {
+    allCards.innerHTML = pokerDeckData.map(renderRecomendedCards).join("");
+    showAllButton.addEventListener('click', () => {
+        allCards.classList.toggle('show')
+    })
+}
+
 // ------------------------------------ INIT ------------------------------------  //
 
 const init = () => {
@@ -251,9 +276,11 @@ const init = () => {
 
     categoryProductsContainer.addEventListener('click', addCardToCart)
     recomendedCards.addEventListener('click', addCardToCart)
+    allCards.addEventListener('click', addCardToCart)
     cardCategoryContainer.addEventListener('click', filterProducts)
     completeBuy()
     showCart()
+    showAll()
 }
 
 init();
