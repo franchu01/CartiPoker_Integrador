@@ -123,7 +123,15 @@ nav{
 .exit_cart{
     font-weight: var(--bold);
 }
-
+.cart_products_container{
+    padding: 20px;
+}
+.spacing-price, .quantity_handler, .item_quantity{
+    color: var(--default_fontcolor);
+}
+.item_handler{
+    margin-left: 80px;
+}
 .overlay{
     position: absolute;
     top: 0px;
@@ -155,6 +163,20 @@ nav{
     height: 40px;
 }
 
+.card_item{
+    display: flex;
+}
+
+.sale_price{
+    color: red;
+}
+
+.product_card--description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Main */
 /*Hero*/
@@ -349,4 +371,7 @@ footer{
     margin-top: 10px;
 }
 
+.title_card--cart{
+    text-decoration: none;
+}
 

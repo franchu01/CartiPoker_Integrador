@@ -146,7 +146,7 @@ const saveLocalStorage = cartList => {
 const buyBtn = document.querySelector(".boton_comprar")
 
 const completeBuy = () => {
-    if (!cart.length){
+    if (!cart.length) {
         return
     } else {
         window.confirm('¿Desea finalizar su compra?')
@@ -154,60 +154,54 @@ const completeBuy = () => {
         window.location.reload()
     }
 }
-
+var i = 0
 const renderCartProduct = cartProduct => {
+
     const {
         id,
         value,
         category,
         price,
         sale,
-        cardImg,
+        img,
         quantity
     } = cartProduct
 
-    if (sale) {
-        return `
-        <div class="product_cart">
+    var primeraParteDelCart = ` 
+    <div class="product_cart">
             <div class="card_item">
-                <img src="${cardImg}" alt="imgCard">
+                <img src="${img}" alt="imgCard">
                 <div class="product_card--description">
-                    <h2 class="title_card--cart">${value}</h2>
-                    <p class="description_card--cart">${category}</p>
+                    <h2 class="title_card--cart" style="text-decoration:line-through";>${value}</h2>
+                    <p class="description_card--cart">${category}</p> 
+                    `
+    var ultimaParteDelCart = `
+    </div>
+            </div>
+            <div class="item_handler">
+                <span class="quantity_handler down" data-id=${id}>-</span>
+                <span class="item_quantity">${quantity}</span>
+                <span class="quantity_handler up" data-id=${id}>+</span>
+            </div>
+        </div>
+    `
+
+    if (sale == "true") {
+        i = i + 1
+        return primeraParteDelCart + `
                     <span class="price" style="text-decoration:line-through;" ><span class="spacing-price">$</span>${price}</span>
-                    <span class="price" style="color:red;" ><span class="spacing_price">$</span>${price * 0,85}</span>
-                </div>
-            </div>
-            <div class="item_handler">
-                <span class="quantity_handler down" data-id=${id}>-</span>
-                <span class="item_quantity">${quantity}</span>
-                <span class="quantity_handler up" data-id=${id}>+</span>
-            </div>
-        </div> 
-        `
+                    <span class="price" style="color:red;" ><span class="spacing_price sale_price">$</span>${price * 0.85}</span> 
+        ` + ultimaParteDelCart
     } else {
-        return `
-        <div class="product_cart">
-            <div class="card_item">
-                <img src="${cardImg}" alt="imgCard">
-                <div class="product_card--description">
-                    <h2 class="title_card--cart">${value}</h2>
-                    <p class="description_card--cart">${category}</p>
+        i = i + 1
+        return primeraParteDelCart + `
                     <span class="price"><span class="spacing_price">$</span>${price}</span>
-                </div>
-            </div>
-            <div class="item_handler">
-                <span class="quantity_handler down" data-id=${id}>-</span>
-                <span class="item_quantity">${quantity}</span>
-                <span class="quantity_handler up" data-id=${id}>+</span>
-            </div>
-        </div> 
-        `
+        ` + ultimaParteDelCart
     }
 }
 
 const renderCart = (cartList) => {
-    if(!cartList.length){
+    if (!cartList.length) {
         cartProductsContainer.innerHTML = `<p class="empty-msg"> No hay productos en el carrito</p>`
         return;
     }
@@ -215,9 +209,9 @@ const renderCart = (cartList) => {
 }
 
 const addCardToCart = (e) => {
-    if(!e.target.classList.contains('add-btn')) return;
+    if (!e.target.classList.contains('add-btn')) return;
     const selectedCard = {
-        id : e.target.dataset.id,
+        id: e.target.dataset.id,
         value: e.target.dataset.value,
         price: e.target.dataset.price,
         category: e.target.dataset.category,
@@ -225,12 +219,18 @@ const addCardToCart = (e) => {
         img: e.target.dataset.img,
     };
     const existingCardInCart = cart.find(item => item.id === selectedCard.id)
-    if(existingCardInCart){
+    if (existingCardInCart) {
         cart = cart.map((item) => {
-            return item.id === selectedCard.id ? { ... item, quantity: Number(item.quantity) + 1} : item;
+            return item.id === selectedCard.id ? {
+                ...item,
+                quantity: Number(item.quantity) + 1
+            } : item;
         })
     } else {
-        cart = [... cart, {... selectedCard, quantity : 1}]
+        cart = [...cart, {
+            ...selectedCard,
+            quantity: 1
+        }]
     }
 
     saveLocalStorage(cart)
@@ -250,7 +250,7 @@ const init = () => {
     document.addEventListener('DOMContentLoaded', renderCart(cart));
 
     categoryProductsContainer.addEventListener('click', addCardToCart)
-    
+    recomendedCards.addEventListener('click', addCardToCart)
     cardCategoryContainer.addEventListener('click', filterProducts)
     completeBuy()
     showCart()
