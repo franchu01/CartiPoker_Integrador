@@ -50,6 +50,10 @@ html{
     border-radius: 16px;
 }
 
+span{
+    font-weight: var(--bold);
+}
+
 .login_button{
     padding: 10px 100px;
 }
