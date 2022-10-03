@@ -35,7 +35,15 @@
                             shopping_cart
                         </span>
                     </li>
+                    <li>
+                        <p class="exit_toggle_menu">Close</p>
+                    </li>
                 </ul>
+                <div class="toggle_menu">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
             </div>
 
             <div class="cart">
@@ -45,6 +53,10 @@
                 </div>
                 
                 <div class="cart_products_container">
+                </div>
+                <div class="total_container">
+                    <p>TOTAL:</p>
+                    <p class="total">0</p>
                 </div>
                 <button class="boton_comprar">Comprar</button>
             </div>
@@ -61,7 +73,7 @@
                 <h1>CartiPoker <span>Ya!</span></h1>
                 <p class="slogan">Se te perdio una carta de <span>poker ?</span> No la encontras? Conseguila aca! A un
                     muy buen precio</p>
-                <button class="vermas_boton botones">Ver Mas</button>
+                <a href="#TODAS"><button class="vermas_boton botones"> Ver Mas</button></a> 
             </div>
             <div class="imagen_hero_container">
 
@@ -77,16 +89,16 @@
             <h2>Elegi el tipo que estes buscando</h2>
             <div class="card_category_container">
                 <div class="card_category category" data-category="Diamante">
-                    <h3>Diamante &#9830;</h3>
+                    <h3 class="category_type">Diamante &#9830;</h3>
                 </div>
                 <div class="card_category category" data-category="Corazon">
-                    <h3>Corazon &#9829;</h3>
+                    <h3 class="category_type">Corazon &#9829;</h3>
                 </div>
                 <div class="card_category category" data-category="Pica">
-                    <h3>Picas &#9824;</h3>
+                    <h3 class="category_type">Picas &#9824;</h3>
                 </div>
                 <div class="card_category category" data-category="Trebol">
-                    <h3>Trebol &#9827;</h3>
+                    <h3 class="category_type">Trebol &#9827;</h3>
                 </div>
             </div>
             <div class="selected_products_container">
@@ -95,7 +107,7 @@
         </section>
 
         <section class="ver_todas_container">
-            <button class="ver_todas_boton botones"> VER TODAS </button>
+            <button class="ver_todas_boton botones" id="TODAS"> VER TODAS </button>
             <div class="todas_container">
                 
             </div>
@@ -106,9 +118,9 @@
     <footer>
         <div class="datos_personales">
             <ul>
-                <li><a href="https://www.instagram.com/francersosimo/"> Instagram </a></li>
-                <li> <a href="https://www.linkedin.com/in/francisco-cersosimo-5799731b8/"> Linkedin </a> </li>
-                <li> <a href="https://landing-page-portfolio-wheat.vercel.app/"> Portfolio </a> </li>
+                <li class="link_personal"><a href="https://www.instagram.com/francersosimo/"> Instagram </a></li>
+                <li class="link_personal"> <a href="https://www.linkedin.com/in/francisco-cersosimo-5799731b8/"> Linkedin </a> </li>
+                <li class="link_personal"> <a href="https://landing-page-portfolio-wheat.vercel.app/"> Portfolio </a> </li>
             </ul>
         </div>
         <p class="frase_final">Hecho con &#9829; por su servidor <span>Francisco Cersosimo</span> </p>

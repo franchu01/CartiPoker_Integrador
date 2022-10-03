@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+:root {
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+    --backgroundcolor: #14213d;
+    --enlightened_fontcolor: #fca311;
+    --default_fontcolor: #FFFFFF;
+    --less_important_fontcolor: #e5e5e5;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--enlightened_fontcolor);
+    color: var(--default_fontcolor);
+}
+
+.login_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    border: solid 1px var(--enlightened_fontcolor);
+    background-color: var(--backgroundcolor);
+    border-radius: 5px;
+}
+.login_data{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login_input{
+    padding: 10px 60px 10px 20px;
+    border: none;
+    background-color: var(--enlightened_fontcolor);
+    color: var(--default_fontcolor);
+    border-radius: 16px;
+}
+
+.login_button{
+    padding: 10px 100px;
+}
+

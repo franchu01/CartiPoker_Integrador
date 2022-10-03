@@ -1,3 +1,22 @@
+// TOGGLE MENU - TABLET Y MOBILE
+
+const toggleMenuBtn = document.querySelector('.toggle_menu')
+const exitToggleMenuBtn = document.querySelector('.exit_toggle_menu')
+const menuContainer = document.querySelector('.menu_container_lista')
+
+const showMenu = () => {
+
+    toggleMenuBtn.addEventListener('click',() => {
+        menuContainer.classList.toggle('show')
+        toggleMenuBtn.classList.toggle('hide')
+    })
+    exitToggleMenuBtn.addEventListener('click',() => {
+        menuContainer.classList.toggle('show')
+        toggleMenuBtn.classList.toggle('hide')
+    })
+}
+
+
 // Seccion recomendados
 const recomendedCards = document.querySelector(".recomended_container");
 
@@ -109,7 +128,7 @@ const changeFilter = e => {
 }
 
 const filterProducts = (e) => {
-    if (!e.target.classList.contains('category')) return;
+    if (!e.target.classList.contains('category') ) return;
     changeFilter(e);
     renderCategory(e.target.dataset.category, 0)
 }
@@ -156,9 +175,8 @@ const checkForGod = () => {
 }
 
 const completeBuy = () => {
-    const canBuy = checkForGod()
-    console.log(canBuy)
     buyBtn.addEventListener('click', () => {
+        const canBuy = checkForGod()
         if (!cart.length) {
             return
         } else if (canBuy){
@@ -253,8 +271,45 @@ const addCardToCart = (e) => {
 
     saveLocalStorage(cart)
     renderCart(cart)
-
+    showTotal(cart)
 }
+
+/* TOTAL LOGIC */
+
+const total = document.querySelector(".total")
+
+const showTotal = cartList =>{
+    total.innerHTML = `$ ${cartList.reduce((acc, cur) => acc + Number(cur.price) * cur.quantity, 0)
+    }`;
+}
+
+
+const handleQuantity = e => {
+    if(e.target.classList.contains('down')){
+        const cardInCart = cart.find(item => item.id === e.target.dataset.id)
+        if( cardInCart.quantity === 1 ){
+            if (window.confirm('¿ Desea eliminar el producto ?')){
+                cart = cart.filter(card => card.id !== cardInCart.id)
+                saveLocalStorage(cart)
+                renderCart(cart)
+                showTotal(cart)
+                return
+            }
+        }
+        cart = cart.map((item) => {
+            return item.id === cardInCart.id ? {... item, quantity: Number(item.quantity) - 1} : item
+        })
+    } else if (e.target.classList.contains('up')){
+        const cardInCart = cart.find(item => item.id === e.target.dataset.id)
+        cart = cart.map((item) => {
+            return item.id === cardInCart.id ? {... item, quantity: Number(item.quantity) + 1} : item
+        })
+    }
+    saveLocalStorage(cart)
+    renderCart(cart)
+    showTotal(cart)
+}
+
 
 // ------------------ VER TODAS --------------------- // 
 
@@ -271,9 +326,11 @@ const showAll = () => {
 // ------------------------------------ INIT ------------------------------------  //
 
 const init = () => {
+    showMenu()
     document.addEventListener('DOMContentLoaded', renderProductsRandom(recomendedCards, 5, renderRecomendedCardsSale));
     document.addEventListener('DOMContentLoaded', renderCart(cart));
-
+    document.addEventListener('DOMContentLoaded', showTotal(cart))
+    cartProductsContainer.addEventListener('click', handleQuantity)
     categoryProductsContainer.addEventListener('click', addCardToCart)
     recomendedCards.addEventListener('click', addCardToCart)
     allCards.addEventListener('click', addCardToCart)
@@ -281,6 +338,7 @@ const init = () => {
     completeBuy()
     showCart()
     showAll()
+    
 }
 
 init();

@@ -426,7 +426,7 @@ const pokerDeckData = [
     {
         id: 55,
         value: "Blue Joker",
-        price: 4343,
+        price: 8888,
         category: "All",
         sale: false,
         img: './assets/img/blueJoker.jpg',
