@@ -228,18 +228,28 @@ h1 span {
     font-weight: var(--medium);
 }
 
-/*
-.imagen_hero_container{
-    background-color: var(--enlightened_fontcolor);
-    width: 400px;
-    height: 400px;
-}
-*/
-
 .hero_container {
     display: flex;
     padding: 15px 300px;
 }
+
+@keyframes intermitencia {
+    0% {
+        color: var(--backgroundcolor);
+    }
+    50% {
+        color: var(--enlightened_fontcolor);
+    }
+    100% {
+        color: var(--backgroundcolor);
+    }
+}
+
+.signo_de_exclamacion{
+    animation: intermitencia 1s;
+    animation-iteration-count: infinite;
+}
+
 
 /* Cartas mas compradas */
 
@@ -431,6 +441,84 @@ footer {
 
     /* NAV BAR */
 
+    @keyframes toggle_menu_efect {
+        0% {
+            color: var(--backgroundcolor);
+        }
+
+        100% {
+            color: var(--enlightened_fontcolor);
+        }
+    }
+
+    .menu_container span{
+        animation-name: toggle_menu_efect;
+        animation-duration: 2s;
+        transition: all 0.5s ease;
+    }
+
+    .menu_container_lista {
+        display: none;
+    }
+
+
+    .exit_toggle_menu {
+        display: flex;
+        color: red;
+    }
+
+    .toggle_menu {
+        display: flex;
+        color: var(--enlightened_fontcolor);
+    }
+
+    /* RESPONSIVE PARA TABLET */
+    /* HERO SECTION */
+
+    .hero_container {
+        padding: 100px 20px;
+    }
+
+    .hero_container div {
+        padding: 0;
+    }
+
+    .hero_container h1 {
+        font-size: 128px;
+    }
+
+    .slogan {
+        font-size: 32px;
+    }
+
+    .menu_container_lista {
+        margin-right: 0;
+        align-items: center;
+    }
+
+    /* CARTAS MAS COMPRADAS SECTION */
+
+    .recomended_container {
+        flex-wrap: wrap;
+    }
+
+    /* CARD CATEGORY SECTION */
+
+    .card_category_container {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card_category {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width:480px) {
+
+    /* NAV BAR */
+
     .menu_container_lista {
         display: none;
     }
@@ -445,105 +533,44 @@ footer {
         color: var(--enlightened_fontcolor);
     }
 
-        /* RESPONSIVE PARA TABLET */
-        /* HERO SECTION */
+    /* MOBILE RESPONSIVE */
+    /* HERO SECTION */
 
-        .hero_container {
-            padding: 100px 20px;
-        }
-
-        .hero_container div {
-            padding: 0;
-        }
-
-        .hero_container h1 {
-            font-size: 128px;
-        }
-
-        .slogan {
-            font-size: 32px;
-        }
-
-        .menu_container_lista {
-            margin-right: 0;
-            align-items: center;
-        }
-
-        /* CARTAS MAS COMPRADAS SECTION */
-
-        .recomended_container {
-            flex-wrap: wrap;
-        }
-
-        /* CARD CATEGORY SECTION */
-
-        .card_category_container {
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card_category {
-            padding: 10px 20px;
-        }
+    .hero_container h1 {
+        font-size: 78px;
     }
 
-    @media (max-width:480px) {
+    .slogan {
+        font-size: 20px;
+    }
 
-        /* NAV BAR */
+    .vermas_boton {
+        padding: 15px 66px;
+    }
 
-        .menu_container_lista {
-            display: none;
-        }
+    /* CARD CATEGORY SECTION */
 
-        .exit_toggle_menu {
-            display: flex;
-            color: red;
-        }
+    .card_category {
+        display: flex;
+        justify-content: center;
+        width: 160px;
+    }
 
-        .toggle_menu {
-            display: flex;
-            color: var(--enlightened_fontcolor);
-        }
-
-        /* MOBILE RESPONSIVE */
-        /* HERO SECTION */
-
-        .hero_container h1 {
-            font-size: 78px;
-        }
-
-        .slogan {
-            font-size: 20px;
-        }
-
-        .vermas_boton {
-            padding: 15px 66px;
-        }
-
-        /* CARD CATEGORY SECTION */
-
-        .card_category {
-            display: flex;
-            justify-content: center;
-            width: 160px;
-        }
-
-        .product_recomendation {
-            width: 170px;
-            height: auto;
-        }
-
-        .show {
-            display: flex;
-        }
-
+    .product_recomendation {
+        width: 170px;
+        height: auto;
     }
 
     .show {
         display: flex;
     }
 
-    .hide {
-        display: none;
-    }
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
